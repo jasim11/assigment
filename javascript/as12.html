@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<h2>global</h2>
+	<script type="text/javascript">
+var x="apple";//global
+
+
+function printx()
+{
+var y="apple";
+	document.write( y +"inside  of function,<br>");
+		document.write(x+" outside of function");
+}
+
+printx();
+	document.write(x+" outside of function");
+
+</script>
+<H2>local</H2>
+<script type="text/javascript">
+	function printx()
+{
+var x="apple";
+	document.write( x +"inside  of function,<br>");
+}
+printx();
+
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

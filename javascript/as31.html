@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		label,input{
+			margin-left: 20px;
+
+		}
+div{
+	padding: 10px;
+}
+
+	</style>
+	<script type="text/javascript">
+		function validate() {
+				
+		
+				var yradio=document.getElementById('yes').checked;
+				var nradio=document.getElementById('no').checked;
+			if(yradio==false&&nradio==false)
+			{
+				alert("please select gender")
+				return false;
+			}
+		else{
+			return true;
+		}
+
+		}
+
+	</script>
+</head>
+<body>
+<form action="#" name="myform" onsubmit="return validate();">
+<h2>Radio button validation</h2>
+<div><table bgcolor="skyblue">
+<tr><td>gender</td><td>
+<input id="yes" type="radio" name="txt_radio">Male<input type="radio" name="txt_radio"  id="no">female</td></tr>
+
+<tr><td><input type="submit" name="submit" ></td><td></td></tr>
+
+</table>
+</div>
+</form>
+</body>
+</html>

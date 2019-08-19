@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<htmlk>
+<head>
+	<title></title>
+<script type="text/javascript">
+var imgtkr="f"
+
+function change(){
+	var image=document.getElementById('social');
+
+if(imgtkr=="f"){
+image.src="images/aa.png";
+imgtkr="t";
+}
+else{
+image.src="images/cc.png";
+imgtkr="f";
+}
+
+}
+//setTimeout("change()",2000);
+setInterval("change()",1100);
+
+</script>
+</head>
+<body>
+
+<img id="social" src="images/cc.png" onclick="change()">
+</body>
+</html>

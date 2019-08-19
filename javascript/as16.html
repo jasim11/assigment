@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<script type="text/javascript">
+	const subject1 = prompt("Enter the mark of subject 1");
+	const subject2 = prompt("Enter the mark of subject 2");
+	const subject3=prompt("Enter the mark of subject 3");
+	const subject4=prompt("Enter the mark of subject 4");
+	const subject5=prompt("Enter the mark of subject 5");
+	
+	subs = Number(subject1) + Number(subject2) + Number(subject3) +
+		 	   Number(subject4) + Number(subject5);
+    alert("total mark is \n" +subs );
+
+      var p=(subs*100)/500;
+       document.write("percentage of marks "+p+"%");
+      if (p >= 60) {
+      	alert("He has passed the examination");
+      } else {
+      	alert("Failed");
+      }
+		
+</script>
+</head>
+<body>
+	
+
+</body>
+</html>

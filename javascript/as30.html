@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		label,input{
+			margin-left: 20px;
+
+		}
+div{
+	padding: 10px;
+}
+
+	</style>
+	<script type="text/javascript">
+		function validate() {
+				flag=0;
+				name=document.myform.txt_name.value;
+			if (name=="") {
+				document.getElementById("lbl_name").innerHTML="please enter the name";
+				document.myform.txt_name.style.borderColor="red";
+				document.getElementById("lbl_name").style.color="red";
+				flag++;
+				}
+			else{
+				document.getElementById("lbl_name").innerHTML="";
+				document.myform.txt_name.style.borderColor="initial";
+				}
+
+					email=document.myform.txt_email.value;
+					var reg= /^([A-za-z0-9_\-\.])+\@([A-za-z0-9_\-\.])+\.([A-za-z]{2,4})$/;
+				if (email=="") {
+					document.getElementById("lbl_email").innerHTML="please enter the email";
+					document.myform.txt_email.style.borderColor="red";
+					document.getElementById("lbl_email").style.color="red";
+					flag++;
+					}
+		
+				//console.log(reg.test(email));
+				else if(!reg.test(email)) {
+					document.getElementById("lbl_email").innerHTML="please Enter valid email";
+					document.myform.txt_email.style.borderColor="red";
+					document.getElementById("lbl_email").style.color="red";
+					flag++;
+						
+				}
+					else{
+				document.getElementById("lbl_email").innerHTML="";
+				document.myform.txt_email.style.borderColor="initial";
+				}
+
+				textarea=document.myform.txt_txtarea.value;
+			if (textarea=="") {
+				document.getElementById("lbl_txtarea").innerHTML="please enter the address";
+				document.myform.txt_txtarea.style.borderColor="red";
+				document.getElementById("lbl_txtarea").style.color="red";
+				flag++;
+				}
+			else{
+				document.getElementById("lbl_txtarea").innerHTML="";
+				document.myform.txt_txtarea.style.borderColor="initial";
+				}
+
+
+				telephone=document.myform.txt_tele.value;
+			if (telephone=="") {
+				document.getElementById("lbl_tele").innerHTML="please enter the telephone";
+				document.myform.txt_tele.style.borderColor="red";
+				document.getElementById("lbl_tele").style.color="red";
+				flag++;
+				}
+			else{
+				document.getElementById("lbl_tele").innerHTML="";
+				document.myform.txt_tele.style.borderColor="initial";
+				}
+
+				password=document.myform.txt_password.value;
+
+				cpassword=document.myform.txt_cpassword.value;
+			if (password=="") {
+				document.getElementById("lbl_password").innerHTML="please enter the password";
+				document.myform.txt_password.style.borderColor="red";
+				document.getElementById("lbl_password").style.color="red";
+				document.getElementById("lbl_cpassword").innerHTML="Re enter password";
+				document.myform.txt_cpassword.style.borderColor="red";
+				document.getElementById("lbl_cpassword").style.color="red";
+				flag++;
+				}
+			
+			// if (cpassword=="") {
+			// 	document.getElementById("lbl_cpassword").innerHTML="Re enter password";
+			// 	document.myform.txt_cpassword.style.borderColor="red";
+			// 	document.getElementById("lbl_cpassword").style.color="red";
+			// // 	flag++;
+			// 	}
+				else if(password!==cpassword)
+				{
+					document.getElementById("lbl_cpassword").innerHTML="please Enter same Password";
+					document.myform.txt_cpassword.style.borderColor="red";
+					document.getElementById("lbl_cpassword").style.color="red";
+					flag++;
+						
+				}else{
+				document.getElementById("lbl_password").innerHTML="";
+				document.myform.txt_password.style.borderColor="initial";
+					document.getElementById("lbl_cpassword").innerHTML="";
+				document.myform.txt_cpassword.style.borderColor="initial";
+				}
+
+			// else{
+			
+			// 	}
+			
+		
+
+				
+			if(flag>0){
+				return false;
+				}
+		}
+
+
+
+	</script>
+</head>
+<body>
+<form action="#" name="myform" onsubmit="return validate();">
+<h2>Student registration form</h2>
+<div><table bgcolor="skyblue">
+<tr><td>Name</td><td><input type="text" name="txt_name" ><label id="lbl_name"></label></td></tr>
+<tr><td>Personal Address</td><td><input type="text" name="txt_txtarea" cols="22" rows="5" ><label id="lbl_txtarea"></label></td></tr>
+<tr><td>email</td><td><input type="text" name="txt_email" ><label id="lbl_email"></label></td></tr>
+
+<tr><td>telephone</td><td><input type="number" name="txt_tele" ><label id="lbl_tele"></label></td></tr>
+
+<tr><td>Password</td><td><input type="password" name="txt_password" ><label id="lbl_password"></label></td></tr>
+<tr><td> Confirm Password</td><td><input type="cpassword" name="txt_cpassword" ><label id="lbl_cpassword"></label></td></tr>
+<tr><td><input type="submit" name="submit" ></td><td></td></tr>
+
+</table>
+</div>
+</form>
+</body>
+</html>

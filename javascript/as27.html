@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<htmlk>
+<head>
+	<title></title>
+<script type="text/javascript">
+function change() {
+	var welcome=document.getElementById('welcome')
+	var fname=document.getElementById('fname')
+	var lname=document.getElementById('lname')
+	var email=document.getElementById('email')
+
+	welcome.innerHTML="Welcome "+fname.value+"&nbsp"+lname.value+" YOUR EMAIL ID IS "+email.value;
+}
+</script>
+</head>
+<body>
+<form>
+
+<label>First name</label>
+<input type="text" name="" id="fname"><br><br>
+
+<label>Last name</label>
+<input type="text" name="" id="lname"><br><br>
+
+<label>Email id</label>
+<input type="text" name="" id="email"><br><br>
+
+
+<label>Password</label>
+<input type="password" name="" > <br><br>
+
+<input type="button" name="" value="submit" onclick="change()">
+</form>
+<p id="welcome"></p>
+
+</body>
+</html>

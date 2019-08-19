@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<htmlk>
+<head>
+	<title></title>
+<script type="text/javascript">
+function change() {
+var fname=document.getElementById('fname').value;
+var pass=document.getElementById('pass').value;
+if(fname=="admin"&&pass=="admin123")
+{
+	return true;
+
+}else
+{
+	alert("incorrect username and password")
+	return false;
+}
+
+}
+</script>
+</head>
+<body>
+<form action="as29a.html" method="get">
+
+<label>User name</label>
+<input type="text" name="" id="fname"><br><br>
+
+
+<label>Password</label>
+<input type="password" name="" id="pass"> <br><br>
+
+<input type="submit" name="" value="submit" onclick="return change()">
+</form>
+
+</body>
+</html>
