@@ -1,35 +1,29 @@
+<!DOCTYPE html>
 <html>
 <head>
-
-<h2>global</h2>
+	<title></title>
 	<script type="text/javascript">
-var x="apple";//global
-
-
-function printx()
-{
-var y="apple";
-	document.write( y +"inside  of function,<br>");
-		document.write(x+" outside of function");
-}
-
-printx();
-	document.write(x+" outside of function");
-
-</script>
-<H2>local</H2>
-<script type="text/javascript">
-	function printx()
-{
-var x="apple";
-	document.write( x +"inside  of function,<br>");
-}
-printx();
-
-</script>
-
+		var a="apple";//Global
+ document.write("<h1>Global</h1>");
+		function convert(){
+            
+			 document.write(a+" "+"inside"+" "+"function"+"<br>");
+			}
+		document.write(a+" "+"outside"+" "+"function"+"<br>");
+		convert();
+	</script>
+	<script type="text/javascript">
+		
+ document.write("<h1>Local</h1>");
+		function convert(){
+            var a="apple";//Local
+			 document.write(a+" "+"inside"+" "+"function"+"<br>");
+			}
+		
+		convert();
+	</script>
 </head>
-
 <body>
-</body>
-</html>
+	
+
+</html
