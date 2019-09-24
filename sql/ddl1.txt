@@ -1,0 +1,1 @@
+ Create table tbl_stock(pk_int_stock_id int auto_increment,vchr_name varchar(20),int_quantity int(10),int_price int(10),primary key (pk_int_stock_id));

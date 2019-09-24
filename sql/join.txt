@@ -1,0 +1,27 @@
+
+-----------------------------------------------------------------------------
+j1
+select name,course,grade from student join grade on student.roll_no=grade.roll_no where grade="A";
+
+-----------------------------------------------------------------------------
+j2
+
+select count(name) grade from student join grade on student.roll_no=grade.roll_no where grade="b";
+
+-----------------------------------------------------------------------------
+j3
+select student.roll_no,name,count(course) from student inner join grade on student.roll_no=grade.roll_no group by name;
+-----------------------------------------------------------------------------
+j4
+select name from student inner join grade on student.roll_no=grade.roll_no where course="java" and city="banglore";
+-----------------------------------------------------------------------------
+j5..
+select name,course from student inner join grade on student.roll_no=grade.roll_no where name like 'a%';
+
+-----------------------------------------------------------------------------
+j6
+ select name,timestampdiff(year,dob,curdate()) as age from student;
+-----------------------------------------------------------------------------
+j7
+select name,date_format(dob,'%e-%b-%Y')dob from student;
+-----------------------------------------------------------------------------

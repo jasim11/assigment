@@ -1,0 +1,1 @@
+alter table tbl_stock modify int_price float;

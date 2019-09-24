@@ -1,0 +1,1 @@
+create table tbl_grade(fk_int_roll_no int,vchr_course varchar(20),vchr_grade varchar(20),foreign key(fk_int_roll_no) references tbl_student(pk_int_roll_no));

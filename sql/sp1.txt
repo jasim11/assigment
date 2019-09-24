@@ -1,0 +1,1 @@
+create table tbl_student(pk_int_roll_no int auto_increment,int_enrollment_no int,vchr_name varchar(20),vchr_city varchar(20),vchr_mobileno varchar(20),dat_dob date,bin_status varchar(20),primary key (pk_int_roll_no));

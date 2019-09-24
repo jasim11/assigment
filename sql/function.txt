@@ -1,0 +1,34 @@
+
+-----------------------------------------------------------------------------
+f1
+
+ select sum(int_quantity*int_price) as totalcost from tbl_stock;
+
+-----------------------------------------------------------------------------
+f2
+select sum(int_quantity) as total_no_products from tbl_stock;
+
+-----------------------------------------------------------------------------
+f3
+select ucase(vchr_name) as vchr_name,round(int_price) as int_price from tbl_stock;
+
+-----------------------------------------------------------------------------
+f4
+select count(distinct(vchr_name)) as items from tbl_stock;
+-----------------------------------------------------------------------------
+f5
+sselect  vchr_name,max(int_price) from tbl_stock where int_price=(select max(int_price) from tbl_stock) group by vchr_name;
+-----------------------------------------------------------------------------
+f6
+ select sum(int_count) as total_enrollment from tbl_enrollment;
+-----------------------------------------------------------------------------
+f7
+  select count(vchr_class_name) as no_of_classes from tbl_classes;
+-----------------------------------------------------------------------------
+f8
+select count(vchr_dept_name)  as no_of_dept from tbl_dept;
+-----------------------------------------------------------------------------
+f9.
+ select concat(vchr_name,int_price) as product_price from tbl_stock;
+
+

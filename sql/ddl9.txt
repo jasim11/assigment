@@ -1,0 +1,1 @@
+alter table tbl_classes add unique (vchr_class_name);
